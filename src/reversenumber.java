@@ -5,20 +5,20 @@ public class reversenumber {
 	         
 
 		    public int reverse(int x) {
-		      long rev=0;
-		        int number =x;
-		        while(number!=0) {
-		        	int rem=number%10;
-		        	rev=rev*10+rem;
-		        	number=number/10;
-		        }
-		        	if (rev > Integer.MAX_VALUE) {
+		    	  boolean negativenumber = false;
+			        if (x < 0) {
+			            negativenumber = true;
+			            x = -x;
+			        }
+			        long reverse = 0;
+			        while (x > 0) {
+			            reverse = reverse * 10 + x % 10;
+			            x /= 10;
+			        }
+			        if (reverse > Integer.MAX_VALUE) {
 			            return 0;
 			        }
-		        	
-		        	
-		        
-		        return (int) (rev);
+			        return (int) (negativenumber ? -reverse :reverse);
 		    
 		 
 	    }
