@@ -7,17 +7,17 @@ public class removeelement {
             return 0;
             
         }
-         int size=0;
+         int size[]=new int[6];
         for(int i =0;i<len;i++){
             if(nums[i] != val){
-                nums[size]=nums[i];
-                size++;
+                size[i]=nums[i];
+               
             }
-             
+            System.out.println("after removing the value element"+size[i]);  
         }
-        System.out.println("after removing the value size is"+size);
-        return size;
-    }
+     //System.out.println("after removing the value size is"+size[]);
+        return 0;
+	}
 	public static void main(String args[]) {
 	      Scanner sc = new Scanner(System.in);
 	      System.out.println("Enter the size of the array that is to be created::");
@@ -33,7 +33,6 @@ public class removeelement {
 	      removeelement m = new removeelement();
 	      int val = sc.nextInt();
 	     m.removeElement(myArray,val);
-	   //  System.out.println("size is"+size);
-	     // System.out.println("Minimum value in the array is::"+m.min(myArray));
+	   
 	   }
 }
