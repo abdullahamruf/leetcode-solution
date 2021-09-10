@@ -2,22 +2,17 @@ import java.util.Scanner;
 
 public class SearchInsertPosition {
    public int searchInsert(int[] nums, int target) {
-	   int i=0; 
-	    int j=nums.length-1;
-	 
-	    while(i<=j){
-	        int mid = (i+j)/2;
-	 
-	        if(target > nums[mid]){
-	            i=mid+1;
-	        }else if(target < nums[mid]){
-	            j=mid-1;
-	        }else{
-	            return mid;
-	        }
-	    }
-	 
-	    return i;
+	  for(int i=0;i<nums.length;i++) {
+		  if (nums[i]==target) {
+			  System.out.println(i);  
+		  }
+		  else if(nums[i]!=target) {
+			  int j=nums.length-1;
+			  
+		  }
+		  
+	  }
+	  return 0;
     }
    public static void main(String args[]) {
 	      Scanner sc = new Scanner(System.in);
@@ -30,7 +25,7 @@ public class SearchInsertPosition {
 	         myArray[i] = sc.nextInt();
 	      }
 	      SearchInsertPosition m = new SearchInsertPosition();
-	      m.searchInsert(myArray,2);
+	      m.searchInsert(myArray,7);
 	     // System.out.println("Minimum value in the array is::"+m.min(myArray));
 	   }
 }
