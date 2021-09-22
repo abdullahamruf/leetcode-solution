@@ -2,15 +2,21 @@ import java.util.Scanner;
 
 public class plus1 {
 public int[] plusOne(int[] digits) {
+	int len = digits.length;
 	
-    
-    int n = digits.length;
-   System.out.println(n);
-   return digits;
-        
+      for (int i =len-1;i>=0;i--) {
+    	  if (digits[i]!=9) {
+    		  digits[i]++;
+    		  return digits;
+    		  
+    	  }
+    	  
+    	  
+      }
+       return digits;
+}
 	
-	
-    }
+
 public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter the size of the array that is to be created::");
@@ -22,7 +28,8 @@ public static void main(String args[]) {
        myArray[i] = sc.nextInt();
     }
     plus1 m = new  plus1();
-  m. plusOne(myArray);
+     m. plusOne(myArray);
    // System.out.println()
+  
  }
 }

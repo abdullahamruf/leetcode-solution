@@ -1,17 +1,16 @@
 import java.util.Scanner;
 
-public class maximumsubarray {
-	 public int maxSubArray(int[] nums) {
-		 int maxSum = nums[0];
-	        int sum = 0;
-	        
-	        for(int i=0;i<nums.length;i++) {
-	            sum = Math.max(sum+nums[i], nums[i]);
-	            maxSum = Math.max(sum, maxSum);
-	        }
-	        return maxSum;
+public class buyandell {
+	 public int maxProfit(int[] prices) {
+		 int mim=Integer.MAX_VALUE;
+		 for(int i=0;i<prices.length;i++) {
+			 
+		
+		 }
+		 System.out.println(mim);
+
+		 return mim;
 	    }
-	    
 	 public static void main(String args[]) {
 	      Scanner sc = new Scanner(System.in);
 	      System.out.println("Enter the size of the array that is to be created::");
@@ -22,10 +21,8 @@ public class maximumsubarray {
 	      for(int i=0; i<size; i++) {
 	         myArray[i] = sc.nextInt();
 	      }
-	      maximumsubarray m = new  maximumsubarray();
-	    m.maxSubArray(myArray);
+	      buyandell m = new  buyandell();
+	    m.maxProfit(myArray);
 	     // System.out.println()
 	   }
 }
-
-
